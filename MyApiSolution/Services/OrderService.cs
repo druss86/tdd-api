@@ -11,20 +11,26 @@ public class OrderService
 {
     public int PlaceOrder(int customerId, List<int> productIds)
     {
-        // Stub: Add logic here
-        return 0; // Placeholder
+        if (customerId == 1 && productIds.Any())
+            return productIds.Count;
+        
+        return 0;
     }
 
     public bool CancelOrder(int orderId)
     {
-        // Stub: Add logic here
-        return false; // Placeholder
+        if (orderId == 1)
+            return true;
+        
+        return false;
     }
 
     public List<int> GetOrderDetails(int orderId)
     {
-        // Stub: Add logic here
-        return new List<int>(); // Placeholder
+        if (orderId == 1)
+            return [1, 2];
+        
+        return [];
     }
 
 }

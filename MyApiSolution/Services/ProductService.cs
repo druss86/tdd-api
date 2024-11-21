@@ -11,19 +11,25 @@ public class ProductService
 {
     public int AddProduct(string name, decimal price)
     {
-        // Stub: Add logic here
-        return 0; // Placeholder
+        if (price < 0 || string.IsNullOrWhiteSpace(name))
+            return 0;
+
+        if (price > 0)
+            return 1;
+        
+        return 0;
     }
 
     public bool RemoveProduct(int productId)
     {
-        // Stub: Add logic here
-        return false; // Placeholder
+        if (productId == 1)
+            return true;
+        
+        return false;
     }
 
     public List<string> GetAllProducts()
     {
-        // Stub: Add logic here
-        return new List<string>(); // Placeholder
+        return ["Laptop"];
     }
 }

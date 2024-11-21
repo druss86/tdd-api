@@ -26,6 +26,13 @@ public class ProductServiceTests
     }
 
     [Fact]
+    public void AddProduct_ShouldFailForInvalidName()
+    {
+        var result = _service.AddProduct("", 10.00m);
+        Assert.Equal(0, result);
+    }
+    
+    [Fact]
     public void RemoveProduct_ShouldReturnTrueIfSuccessful()
     {
         var result = _service.RemoveProduct(1);

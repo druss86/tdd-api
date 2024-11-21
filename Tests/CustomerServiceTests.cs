@@ -9,7 +9,7 @@ public class CustomerServiceTests
     [Fact]
     public void AddCustomer_ShouldReturnValidCustomerId()
     {
-        var result = _service.AddCustomer("John Doe", "john@example.com");
+        var result = _service.AddCustomer("John Doe", "john.doe@example.com");
         Assert.True(result > 0);
     }
 
